@@ -6,7 +6,7 @@ from quickstart.serializers import PersonSerializer
 
 
 @api_view(['GET', 'POST'])
-def person_list(request):
+def person_list(request, format=None):
     """
     List all code person, or create a new person.
     """
@@ -24,7 +24,7 @@ def person_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def person_detail(request, pk):
+def person_detail(request, pk, format=None):
     """
     Retrieve, update or delete a code person.
     """
