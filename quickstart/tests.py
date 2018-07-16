@@ -52,11 +52,8 @@ class PersonAPITest(unittest.TestCase):
 
     def test_delete_person(self):
         person = create_person()
-        data = {
-            "name": uuid.uuid4(),
-        }
         url = reverse('person_detail', args=[person.pk, ])
-        response = self.client.delete(url, data)
+        response = self.client.delete(url)
         self.assertEqual(response.status_code, 204)
 
 
