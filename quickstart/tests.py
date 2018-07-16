@@ -2,9 +2,6 @@ import unittest
 import uuid
 from django.test import Client
 from django.core.urlresolvers import reverse
-from rest_framework import serializers
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
 import json
 
 from quickstart.models import Person
